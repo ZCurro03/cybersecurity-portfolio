@@ -12,6 +12,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 * Steganography: metadata extraction, esoteric cipher analysis, audio forensics and spectrogram analysis.
 * Development: Python (cryptography integration, binary parsing, algorithmic automation of classical ciphers).
 * OSINT & GeoINT: Reverse image searching, geospatial analysis, and Street View reconnaissance.
+* Forensics: embedded filesystem analysis and Linux credential forensics.
 * Password Cracking: Hash extraction from compressed archives and offline brute-forcing.
 
 ## 🚩 Solved Challenges
@@ -38,6 +39,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 | Durin's Gates | Steganography / Cryptography | <ul><li>Contextual OSINT research to deduce steganographic passphrases from pop culture references.</li><li>Steganographic data extraction from multimedia files to recover external payloads.</li><li>Multimedia metadata forensics (EXIF analysis) to discover cryptographic keys.</li><li>Decoding of Base64 streams and decryption of OpenSSL payloads (AES-256-CBC) to recover embedded video files.</li></ul> | steghide, exiftool, OpenSSL, CyberChef |
 | Really??? | Steganography / Cryptography | <ul><li>Development of combinatorial algorithms to generate highly constrained, rules-based custom password dictionaries.</li><li>Automation of PGP symmetric decryption brute-forcing via shell scripting.</li><li>Detection and extraction of whitespace steganography (Stegsnow) hidden within decrypted plaintext payloads.</li></ul> | Python (Custom Script), Bash (Custom Script), GnuPG, stegsnow |
 | Juegos de guerra | Steganography / GeoINT | <ul><li>Iterative extraction of embedded thumbnail payloads from multimedia files.</li><li>Metadata forensics (EXIF analysis) to recover fragmented geospatial coordinates (Latitude/Longitude).</li><li>Geospatial intelligence and satellite imagery analysis to visually locate physical ground markings.</li></ul> | exiftool, Google Maps (Satellite) |
+| Hurgando en el router | Forensics | <ul><li>Firmware analysis and automated extraction of embedded filesystems (SquashFS).</li><li>Identification and extraction of Linux system credential files (/etc/shadow).</li><li>Offline password cracking using dictionary attacks against SHA-512 crypt hashes.</li></ul> | binwalk, hashcat |
 
 ## 💻 Custom Tooling & Scripts
 
