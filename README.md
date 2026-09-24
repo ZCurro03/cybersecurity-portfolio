@@ -7,6 +7,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 ## 🛠️  Technical Arsenal
 
 * Network Analysis: Wireshark, Tshark.
+* Web Exploitation: Directory fuzzing, HTTP traffic interception (Burp Suite), and JWT manipulation/forgery.
 * Malware Forensics: Cobalt Strike configuration extraction, Malleable C2 profile analysis.
 * Cryptography & Steganography: RSA/AES decryption, block cipher cryptanalysis (Known-Plaintext Attacks), exploitation of structural vulnerabilities, classical polyalphabetic ciphers and OpenSSL payload decryption.
 * Steganography: Metadata extraction, esoteric cipher analysis, audio forensics and spectrogram analysis.
@@ -29,6 +30,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 | Covert | Steganography | <ul><li>Audio forensics applied to multimedia files (video audio tracks).</li><li>Frequency analysis and anomaly detection within audio signals.</li><li>Extraction of hidden textual information through visual spectrogram representation.</li></ul> | Wavacity |
 | Mad Max | Steganography | <ul><li>Extraction of password hashes from compressed archives and offline cracking.</li><li>Multimedia metadata analysis to discover contextual passwords.</li><li>Audio forensics and hidden data extraction using specialized password-protected steganography tools.</li></ul> | exiftool, 7z2john, hashcat, DeepSound |
 | Don't Roll Your Own Crypto | Cryptography / Steganography | <ul><li>Exploitation of structural weaknesses in custom cryptographic implementations (Linear modified SBOX).</li><li>Block cipher cryptanalysis (AES-128-CBC) allowing block-by-block decryption without key extraction.</li><li>Known-plaintext attack utilizing file format signatures (PNG magic bytes) to deduce cryptographic masks.</li></ul> | Python (Custom Script) |
+| Got Cloudy | Web Exploitation | <ul><li>Directory fuzzing and reconnaissance to discover hidden endpoints.</li><li>HTTP traffic interception to capture and analyze transient session cookies (HttpOnly;Secure).</li><li>Cryptographic analysis of JSON Web Tokens (JWT), offline secret brute-forcing, and token forgery to escalate privileges.</li></ul> | ffuf, Burp Suite, jwt.io, Python (Custom Scripts) |
 | Tattoo | Forensics | <ul><li>Embedded filesystem analysis and artifact extraction from raw USB disk images.</li><li>Triage of initial access payloads and discarding of decoy documents.</li><li>Forensic analysis of malicious Windows Shortcuts (.lnk).</li><li>Deobfuscation of evasion-oriented Batch scripts via environmental variable substring indexing to extract Command & Control (C2) domains.</li></ul> | file, binwalk, Autopsy |
 
 #### 2018 Challenges
@@ -53,6 +55,11 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 * `interactive_substitution_decoder.py`: Interactive cryptographic tool designed to assist in the manual decryption of monoalphabetic substitution ciphers through real-time character mapping.
 * `pgp_wordlist_generator.py`: Python script utilizing the `itertools` library to generate massive, highly-constrained permutation dictionaries based on specific character sets, lengths, and digit-inclusion rules.
 * `pgp_symmetric_bruteforcer.sh`: Bash automation script designed to loop through custom dictionaries and brute-force PGP symmetrically encrypted payloads silently and efficiently.
+
+### 🌐 Web Exploitation
+
+* `jwt_secret_bruteforcer.py`: Custom script to perform offline brute-force attacks against JWT HMAC signatures using custom wordlists.
+* `jwt_token_forger.py`: Cryptographic tool designed to generate and sign custom JSON Web Tokens (JWT) for privilege escalation using recovered secrets.
 
 ### 🔬 Malware forensics
 
