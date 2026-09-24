@@ -9,10 +9,11 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 * Network Analysis: Wireshark, Tshark.
 * Malware Forensics: Cobalt Strike configuration extraction, Malleable C2 profile analysis.
 * Cryptography & Steganography: RSA/AES decryption, block cipher cryptanalysis (Known-Plaintext Attacks), exploitation of structural vulnerabilities, classical polyalphabetic ciphers and OpenSSL payload decryption.
-* Steganography: metadata extraction, esoteric cipher analysis, audio forensics and spectrogram analysis.
+* Steganography: Metadata extraction, esoteric cipher analysis, audio forensics and spectrogram analysis.
 * Development: Python (cryptography integration, binary parsing, algorithmic automation of classical ciphers).
 * OSINT & GeoINT: Reverse image searching, geospatial analysis, and Street View reconnaissance.
-* Forensics: embedded filesystem analysis and Linux credential forensics.
+* Forensics (Linux): Firmware analysis, embedded filesystem extraction (SquashFS), and system credential forensics.
+* Forensics (Windows): Disk image processing (Autopsy), artifact analysis (malicious .lnk shortcuts, hidden executables), and triage of obfuscated Command & Control droppers.
 * Password Cracking: Hash extraction from compressed archives and offline brute-forcing.
 
 ## 🚩 Solved Challenges
@@ -28,6 +29,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 | Covert | Steganography | <ul><li>Audio forensics applied to multimedia files (video audio tracks).</li><li>Frequency analysis and anomaly detection within audio signals.</li><li>Extraction of hidden textual information through visual spectrogram representation.</li></ul> | Wavacity |
 | Mad Max | Steganography | <ul><li>Extraction of password hashes from compressed archives and offline cracking.</li><li>Multimedia metadata analysis to discover contextual passwords.</li><li>Audio forensics and hidden data extraction using specialized password-protected steganography tools.</li></ul> | exiftool, 7z2john, hashcat, DeepSound |
 | Don't Roll Your Own Crypto | Cryptography / Steganography | <ul><li>Exploitation of structural weaknesses in custom cryptographic implementations (Linear modified SBOX).</li><li>Block cipher cryptanalysis (AES-128-CBC) allowing block-by-block decryption without key extraction.</li><li>Known-plaintext attack utilizing file format signatures (PNG magic bytes) to deduce cryptographic masks.</li></ul> | Python (Custom Script) |
+| Tattoo | Forensics | <ul><li>Embedded filesystem analysis and artifact extraction from raw USB disk images.</li><li>Triage of initial access payloads and discarding of decoy documents.</li><li>Forensic analysis of malicious Windows Shortcuts (.lnk).</li><li>Deobfuscation of evasion-oriented Batch scripts via environmental variable substring indexing to extract Command & Control (C2) domains.</li></ul> | file, binwalk, Autopsy |
 
 #### 2018 Challenges
 
