@@ -15,6 +15,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 * OSINT & GeoINT: Reverse image searching, geospatial analysis, and Street View reconnaissance.
 * Forensics (Linux): Firmware analysis, embedded filesystem extraction (SquashFS), and system credential forensics.
 * Forensics (Windows): Disk image processing (Autopsy), artifact analysis (malicious .lnk shortcuts, hidden executables), and triage of obfuscated Command & Control droppers.
+* Reverse Engineering: ActionScript decompilation and static analysis.
 * Password Cracking: Hash extraction from compressed archives and offline brute-forcing.
 
 ## 🚩 Solved Challenges
@@ -32,6 +33,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 | Don't Roll Your Own Crypto | Cryptography / Steganography | <ul><li>Exploitation of structural weaknesses in custom cryptographic implementations (Linear modified SBOX).</li><li>Block cipher cryptanalysis (AES-128-CBC) allowing block-by-block decryption without key extraction.</li><li>Known-plaintext attack utilizing file format signatures (PNG magic bytes) to deduce cryptographic masks.</li></ul> | Python (Custom Script) |
 | Got Cloudy | Web Exploitation | <ul><li>Directory fuzzing and reconnaissance to discover hidden endpoints.</li><li>HTTP traffic interception to capture and analyze transient session cookies (HttpOnly;Secure).</li><li>Cryptographic analysis of JSON Web Tokens (JWT), offline secret brute-forcing, and token forgery to escalate privileges.</li></ul> | ffuf, Burp Suite, jwt.io, Python (Custom Scripts) |
 | R'lyeh | Web Exploitation | <ul><li>Discovery of exposed environment configuration files via directory fuzzing to extract database credentials.</li><li>API endpoint reconnaissance and interaction using SwaggerUI documentation.</li><li>Identification of weak, deterministic token generation mechanisms.</li><li>Privilege escalation to moderator level by forging tokens using leaked user attributes from various API endpoints.</li></ul> | Burp Suite, CyberChef |
+| Gr14L | Web Exploitation / Reverse Engineering | <ul><li>Reconnaissance and directory fuzzing to discover exposed cryptographic assets (`.pem` public keys) and legacy client-side applets.</li><li>Reverse engineering and static analysis of legacy Flash multimedia files (`.swf` / ActionScript) to reconstruct execution flows.</li><li>Cryptanalysis and decryption of hardcoded RC4 strings to uncover hidden API endpoints.</li><li>JSON Web Token (JWT) manipulation via Algorithm Confusion attacks (downgrading `RS256` to `HS256`), utilizing exposed public keys as symmetric HMAC secrets for privilege escalation.</li></ul> | JPEXS Free Flash Decompiler, Python (Custom Script) |
 | Tattoo | Forensics | <ul><li>Embedded filesystem analysis and artifact extraction from raw USB disk images.</li><li>Triage of initial access payloads and discarding of decoy documents.</li><li>Forensic analysis of malicious Windows Shortcuts (.lnk).</li><li>Deobfuscation of evasion-oriented Batch scripts via environmental variable substring indexing to extract Command & Control (C2) domains.</li></ul> | file, binwalk, Autopsy |
 
 #### 2018 Challenges
@@ -61,6 +63,7 @@ Welcome to my personal cybersecurity and threat hunting challenge portfolio.
 
 * `jwt_secret_bruteforcer.py`: Custom script to perform offline brute-force attacks against JWT HMAC signatures using custom wordlists.
 * `jwt_token_forger.py`: Cryptographic tool designed to generate and sign custom JSON Web Tokens (JWT) for privilege escalation using recovered secrets.
+* `jwt_algorithm_confusion_forger.py`: Python script to automate JWT Algorithm Confusion (RS256 to HS256) downgrade attacks, utilizing exposed public keys as symmetric HMAC secrets for privilege escalation.
 
 ### 🔬 Malware forensics
 
